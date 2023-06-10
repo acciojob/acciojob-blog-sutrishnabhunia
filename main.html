@@ -1,16 +1,61 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <title>Accio Job Blog</title>
+  <style>
+    .blog-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .blog-item {
+      width: 300px;
+      margin: 20px;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .blog-item img {
+      height: 200px;
+    }
+
+    .scrolling-text {
+      overflow: hidden;
+      white-space: nowrap;
+      animation: scroll 10s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+  <h1 class="scrolling-text">Welcome to Acciojobs!</h1>
+  
+  <div class="blog-container">
+    <div class="blog-item" onclick="window.location.href='https://acciojob.com/blog/'">
+      <img src="Image_one" alt="Blog One">
+      <h2>Brute Force vs. Optimization</h2>
+      <p>We can say that optimization is one step further than the brute-force method of problem solving…</p>
+    </div>
+    
+    <div class="blog-item" onclick="window.location.href='https://acciojob.com/blog/brute-force-vs-optimization/'">
+      <img src="Image_two" alt="Blog Two">
+      <h2>DSA vs. Competitive Programming</h2>
+      <p>DSA or Competitive programming? What is better for you? Questions such as these often put you in a…</p>
+    </div>
+    
+    <div class="blog-item" onclick="window.location.href='https://acciojob.com/blog/dsa-vs-competitive-programming/'">
+      <img src="Image_three" alt="Blog Three">
+      <h2>10 Tips to Optimize Your LinkedIn Profile and Attract Recruiters</h2>
+      <p>As a job seeker, you may wonder how to make your LinkedIn profile stand out to recruiters. Your LinkedIn…</p>
+    </div>
+  </div>
 </body>
-
 </html>
+
